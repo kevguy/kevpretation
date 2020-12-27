@@ -8,7 +8,7 @@ import (
 func TestNextTokenBasic(t *testing.T) {
 	input := `=+(){},;`
 	tests := []struct {
-		expectedType    token.TokenType
+		expectedType   token.TokenType
 		expectedLiteral string
 	}{
 		{token.ASSIGN, "="},
@@ -150,7 +150,7 @@ func TestNextTokenExtended(t *testing.T) {
 		{token.EOF, ""},
 	}
 
-	l := New(input)
+		l := New(input)
 
 	for i, tt := range tests {
 		tok := l.NextToken()
