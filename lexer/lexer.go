@@ -1,7 +1,6 @@
 package lexer
 
 import (
-	"fmt"
 	"github.com/kevguy/kevpretation/token"
 )
 
@@ -31,7 +30,6 @@ func (l *Lexer) readChar() {
 func (l *Lexer) NextToken() token.Token {
 	var tok token.Token
 	l.skipWhitespace()
-	fmt.Println(l.ch)
 	switch l.ch {
 	case '=':
 		if l.peekChar() == '=' {
